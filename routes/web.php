@@ -18,8 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('//', function () {
-    return view('backend.index');
-});
+
 
 Route::get('{path}','HomeController@index')->where( 'path', '([A-z\d-/_.]+)?' );

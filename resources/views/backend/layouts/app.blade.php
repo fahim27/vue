@@ -12,15 +12,13 @@
 
 </head>
 <body class="nav-md">
-    <div class="container body" id="app">
-        <div class="main_container">
-            @include('backend.partials.sidebar')
-            @include('backend.partials.navbar')
-            @yield('content')
-            @include('backend.partials.footer')
 
-        </div>
+    <div class="container body" id="app">
+
+        <router-view></router-view>
+
     </div>
+
 <!--
 ========================================================
 //============ALL JS LINKING || INCLUDING=============//

@@ -26,29 +26,17 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                     <li>
-                        <router-link to="home"><i class="fa fa-home"></i> Home</router-link>
+                        <router-link to="admin"><i class="fa fa-home"></i> Home</router-link>
 
                     </li>
 
+                    <li><a><i class="fa fa-bar-chart-o"></i> Management <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                          <li><router-link to="user"><i class="fa fa-home"></i>User</router-link></li>
 
-                    <li>
-                        <router-link to="about"><i class="fa fa-home"></i>About</router-link>
+                        </ul>
                     </li>
-{{--                    <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>--}}
-{{--                        <ul class="nav child_menu">--}}
-{{--                            <li><a href="chartjs.html">Chart JS</a></li>--}}
-{{--                            <li><a href="chartjs2.html">Chart JS2</a></li>--}}
-{{--                            <li><a href="morisjs.html">Moris JS</a></li>--}}
-{{--                            <li><a href="echarts.html">ECharts</a></li>--}}
-{{--                            <li><a href="other_charts.html">Other Charts</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
-{{--                    <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>--}}
-{{--                        <ul class="nav child_menu">--}}
-{{--                            <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>--}}
-{{--                            <li><a href="fixed_footer.html">Fixed Footer</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
+
                 </ul>
             </div>
             <div class="menu_section">
