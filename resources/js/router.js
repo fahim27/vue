@@ -11,21 +11,33 @@ const routes = [
     {
         path: '/admin',
         component: Home,
+        beforeEnter:requireLogin
+
 
     },
     {
         path: '/user',
-        component: User
+        component: User,
+        beforeEnter:requireLogin
+
     },
     {
         path: '/login',
         component: Login,
-        beforeEnter: (to, from, next) => {
-           next()
-        }
+
     },
 
 ]
+
+function requireLogin(to, from, next) {
+
+        next({
+            path: '/login',
+
+        })
+
+}
+
 
 export default new VueRouter({
     mode: 'history',

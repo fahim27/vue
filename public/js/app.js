@@ -1989,6 +1989,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -38969,7 +38985,41 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "main_container" }, [
-      _c("div", { staticClass: "login_content" })
+      _c("div", { staticClass: "login_content" }, [
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")]),
+        _vm._v(" "),
+        _c("h3", [_vm._v("Login")])
+      ])
     ])
   }
 ]
@@ -55299,17 +55349,23 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 
 var routes = [{
   path: '/admin',
-  component: _components_admin_Home__WEBPACK_IMPORTED_MODULE_2__["default"]
+  component: _components_admin_Home__WEBPACK_IMPORTED_MODULE_2__["default"],
+  beforeEnter: requireLogin
 }, {
   path: '/user',
-  component: _components_admin_User__WEBPACK_IMPORTED_MODULE_3__["default"]
+  component: _components_admin_User__WEBPACK_IMPORTED_MODULE_3__["default"],
+  beforeEnter: requireLogin
 }, {
   path: '/login',
-  component: _components_admin_Login__WEBPACK_IMPORTED_MODULE_4__["default"],
-  beforeEnter: function beforeEnter(to, from, next) {
-    next();
-  }
+  component: _components_admin_Login__WEBPACK_IMPORTED_MODULE_4__["default"]
 }];
+
+function requireLogin(to, from, next) {
+  next({
+    path: '/login'
+  });
+}
+
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
   routes: routes
