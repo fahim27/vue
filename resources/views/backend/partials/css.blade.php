@@ -15,3 +15,12 @@
 <link href="{{asset('backend/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
 <!-- Custom Theme Style -->
 <link href="{{asset('backend/build/css/custom.min.css')}}" rel="stylesheet">
+<style>
+    .invalid-feedback{
+        font-size: 15px;
+    }
+    .fa-spin{
+        font-size: 25px;
+        text-align: center;
+    }
+</style>

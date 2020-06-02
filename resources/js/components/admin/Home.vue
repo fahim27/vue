@@ -49,6 +49,9 @@
     import Sidebar from "./Sidebar";
     import Navbar from "./Navbar";
     export  default {
+        mounted() {
+          console.log(this.$store.getters.isAthenticate)
+        },
         components:{
             Sidebar,
             Navbar

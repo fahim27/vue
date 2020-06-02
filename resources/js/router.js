@@ -5,20 +5,23 @@ Vue.use(VueRouter)
 import Home from "./components/admin/Home";
 import User from "./components/admin/User";
 import Login from "./components/admin/Login";
+import store from "./store";
+
 
 const routes = [
 
     {
         path: '/admin',
         component: Home,
-        beforeEnter:requireLogin
-
+        meta: {
+            requiresAuth: true
+        }
 
     },
     {
         path: '/user',
         component: User,
-        beforeEnter:requireLogin
+
 
     },
     {
@@ -27,19 +30,38 @@ const routes = [
 
     },
 
+    // VueRouter.beforeEach((to, from, next) => {
+    //     if (to.matched.some(record => record.meta.requiresAuth)) {
+    //         if (store.getters.isAthenticate) {
+    //             next()
+    //             return
+    //         }
+    //         next('/login')
+    //     } else {
+    //         next()
+    //     }
+    // })
+
 ]
 
-function requireLogin(to, from, next) {
-
-        next({
-            path: '/login',
-
-        })
-
-}
 
 
-export default new VueRouter({
+
+const  router=new VueRouter({
     mode: 'history',
     routes
 })
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+        if (localStorage.getItem('token')) {
+            next()
+            return
+        }
+        next('/login')
+    } else {
+        next()
+    }
+})
+
+export default router

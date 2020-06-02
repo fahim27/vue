@@ -14,7 +14,7 @@
                 </div>
                 <div class="profile_info">
                     <span>Welcome,</span>
-                    <h2>John Doe</h2>
+                    <h2>{{data}}</h2>
                 </div>
             </div>
             <!-- /menu profile quick info -->
@@ -91,6 +91,18 @@
 </template>
 <script>
     export default {
+        mounted() {
+               console.log( this.data)
+        },
+
+        data(){
+          return {
+             data:   this.$store.getters.user,
+          }
+        },
+
+
+
         name:'Sidebar'
     }
 </script>
